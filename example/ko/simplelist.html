@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Simple list</title>
+  </head>
+  <body>
+    <form data-bind="submit: addItem">
+      New item:
+      <input data-bind='value: itemToAdd, valueUpdate:"afterkeydown"' />
+      <button type="submit" data-bind="enable: itemToAdd().length>0">Add</button>
+      <p>
+        Your items:
+      </p>
+      <select multiple="multiple" width="50" data-bind="options: items">
+
+      </select>
+    </form>
+    <script src="js/Knockout-3.2.0.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      var viewModel = {};
+      viewModel.items = ko.observableArray(["Alpha", "Beta", "Gamma"]);
+      viewModel.itemToAdd = ko.observable("");
+      viewModel.addItem = function(){
+        if(viewModel.itemToAdd() != ""){
+          viewModel.items.push(viewModel.itemToAdd());
+          viewModel.itemToAdd("");
+        }
+      }
+      ko.applyBindings(viewModel);
+    </script>
+  </body>
+</html>
