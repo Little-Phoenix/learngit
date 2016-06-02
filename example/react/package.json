@@ -1,0 +1,48 @@
+{
+  "name": "react-webpack",
+  "version": "1.0.0",
+  "description": "webpack demo",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --hot --progress --colors",
+    "build": "webpack --progress --colors"
+  },
+  "repository": {
+    "type": "git",
+    "url": ".."
+  },
+  "keywords": [
+    "react",
+    "webpack"
+  ],
+  "author": "yixuan",
+  "devDependencies": {
+    "babel-core": "*",
+    "babel-loader": "*",
+    "babel-plugin-react-transform": "*",
+    "bootstrap-webpack": "0.0.5",
+    "css-loader": "*",
+    "less": "*",
+    "less-loader": "*",
+    "react-hot-loader": "*",
+    "react-transform-hmr": "*",
+    "webpack": "*",
+    "webpack-dev-server": "*"
+  },
+  "dependencies": {
+    "babel-preset-es2015": "*",
+    "babel-preset-react": "*",
+    "bootstrap": "^3.3.6",
+    "graceful": "*",
+    "html-webpack-plugin": "*",
+    "jquery": "^2.2.4",
+    "lodash": "*",
+    "react": "*",
+    "react-bootstrap": "^0.29.4",
+    "react-data-growth": "0.0.2",
+    "react-dom": "*",
+    "react-kendo": "*",
+    "react-router": "*",
+    "recluster": "*"
+  }
+}
