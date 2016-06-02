@@ -16,14 +16,14 @@ let Timer = React.createClass({
   tick(){
     //每50ms调用，更新计数器，调用setState函数可以使组件重新渲染
     this.setState({
-      elapsed: new Date() - this.props.start
+      elapsed: new Date() - (isNaN(this.props.start)?0:this.props.start)
     })
   },
   render(){
     var elapsed = Math.round(this.state.elapsed/100);
     var seconds = (elapsed/10).toFixed(1);
     return(
-        <p className="timer" start='10'>This example was started <b>{seconds} seconds</b> ago.</p>
+        <p className="timer">This example was started <b>{seconds} seconds</b> ago.</p>
     );
   }
 });
