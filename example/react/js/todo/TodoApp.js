@@ -12,18 +12,15 @@ class App extends Component {
     return (
       <div>
         <AddTodo
-          onAddClick={text =>
-            dispatch(addTodo(text))
+          onAddClick={text => dispatch(addTodo(text))
           } />
         <TodoList
           todos={visibleTodos}
-          onTodoClick={index =>
-            dispatch(completeTodo(index))
+          onTodoClick={index => dispatch(completeTodo(index))
           } />
         <Footer
           filter={visibilityFilter}
-          onFilterChange={nextFilter =>
-            dispatch(setVisibilityFilter(nextFilter))
+          onFilterChange={nextFilter => dispatch(setVisibilityFilter(nextFilter))
           } />
       </div>
     )
