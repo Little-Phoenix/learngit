@@ -1,4 +1,4 @@
-webpackJsonp([3],{
+webpackJsonp([1],{
 
 /***/ 0:
 /***/ function(module, exports, __webpack_require__) {
@@ -15,11 +15,11 @@ webpackJsonp([3],{
 
 	var _reactRedux = __webpack_require__(258);
 
-	var _TodoApp = __webpack_require__(417);
+	var _connect = __webpack_require__(271);
 
-	var _TodoApp2 = _interopRequireDefault(_TodoApp);
+	var _connect2 = _interopRequireDefault(_connect);
 
-	var _reducers = __webpack_require__(423);
+	var _reducers = __webpack_require__(273);
 
 	var _reducers2 = _interopRequireDefault(_reducers);
 
@@ -28,9 +28,9 @@ webpackJsonp([3],{
 	}
 
 	var store = (0, _redux.createStore)(_reducers2.default);
+	var element = document.getElementById('counter');
 
-	var rootElement = document.getElementById('todo');
-	(0, _reactDom.render)(_react2.default.createElement(_reactRedux.Provider, { store: store }, _react2.default.createElement(_TodoApp2.default, null)), rootElement);
+	(0, _reactDom.render)(_react2.default.createElement(_reactRedux.Provider, { store: store }, _react2.default.createElement(_connect2.default, null)), element);
 
 /***/ },
 
@@ -1757,7 +1757,7 @@ webpackJsonp([3],{
 
 /***/ },
 
-/***/ 417:
+/***/ 271:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1766,167 +1766,29 @@ webpackJsonp([3],{
 	  value: true
 	});
 
-	var _createClass = function () {
-	  function defineProperties(target, props) {
-	    for (var i = 0; i < props.length; i++) {
-	      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-	    }
-	  }return function (Constructor, protoProps, staticProps) {
-	    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-	  };
-	}();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
+	var _redux = __webpack_require__(245);
 
 	var _reactRedux = __webpack_require__(258);
 
-	var _actions = __webpack_require__(418);
+	var _counter = __webpack_require__(272);
 
-	var _AddTodo = __webpack_require__(419);
-
-	var _AddTodo2 = _interopRequireDefault(_AddTodo);
-
-	var _TodoList = __webpack_require__(420);
-
-	var _TodoList2 = _interopRequireDefault(_TodoList);
-
-	var _Footer = __webpack_require__(422);
-
-	var _Footer2 = _interopRequireDefault(_Footer);
+	var _counter2 = _interopRequireDefault(_counter);
 
 	function _interopRequireDefault(obj) {
 	  return obj && obj.__esModule ? obj : { default: obj };
 	}
 
-	function _classCallCheck(instance, Constructor) {
-	  if (!(instance instanceof Constructor)) {
-	    throw new TypeError("Cannot call a class as a function");
-	  }
-	}
-
-	function _possibleConstructorReturn(self, call) {
-	  if (!self) {
-	    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-	  }return call && (typeof call === "object" || typeof call === "function") ? call : self;
-	}
-
-	function _inherits(subClass, superClass) {
-	  if (typeof superClass !== "function" && superClass !== null) {
-	    throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
-	  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-	}
-
-	var App = function (_Component) {
-	  _inherits(App, _Component);
-
-	  function App() {
-	    _classCallCheck(this, App);
-
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(App).apply(this, arguments));
-	  }
-
-	  _createClass(App, [{
-	    key: 'render',
-	    value: function render() {
-	      // Injected by connect() call:
-	      var _props = this.props;
-	      var dispatch = _props.dispatch;
-	      var visibleTodos = _props.visibleTodos;
-	      var visibilityFilter = _props.visibilityFilter;
-
-	      return _react2.default.createElement('div', null, _react2.default.createElement(_AddTodo2.default, {
-	        onAddClick: function onAddClick(text) {
-	          return dispatch((0, _actions.addTodo)(text));
-	        } }), _react2.default.createElement(_TodoList2.default, {
-	        todos: visibleTodos,
-	        onTodoClick: function onTodoClick(index) {
-	          return dispatch((0, _actions.completeTodo)(index));
-	        } }), _react2.default.createElement(_Footer2.default, {
-	        filter: visibilityFilter,
-	        onFilterChange: function onFilterChange(nextFilter) {
-	          return dispatch((0, _actions.setVisibilityFilter)(nextFilter));
-	        } }));
-	    }
-	  }]);
-
-	  return App;
-	}(_react.Component);
-
-	App.propTypes = {
-	  visibleTodos: _react.PropTypes.arrayOf(_react.PropTypes.shape({
-	    text: _react.PropTypes.string.isRequired,
-	    completed: _react.PropTypes.bool.isRequired
-	  }).isRequired).isRequired,
-	  visibilityFilter: _react.PropTypes.oneOf(['SHOW_ALL', 'SHOW_COMPLETED', 'SHOW_ACTIVE']).isRequired
-	};
-
-	function selectTodos(todos, filter) {
-	  switch (filter) {
-	    case _actions.VisibilityFilters.SHOW_ALL:
-	      return todos;
-	    case _actions.VisibilityFilters.SHOW_COMPLETED:
-	      return todos.filter(function (todo) {
-	        return todo.completed;
-	      });
-	    case _actions.VisibilityFilters.SHOW_ACTIVE:
-	      return todos.filter(function (todo) {
-	        return !todo.completed;
-	      });
-	  }
-	}
-
-	// Which props do we want to inject, given the global state?
-	// Note: use https://github.com/faassen/reselect for better performance.
-	function select(state) {
+	function mapStateToProps(state) {
 	  return {
-	    visibleTodos: selectTodos(state.todos, state.visibilityFilter),
-	    visibilityFilter: state.visibilityFilter
+	    counter: state.counter
 	  };
 	}
 
-	// 包装 component ，注入 dispatch 和 state 到其默认的 connect(select)(App) 中；
-	exports.default = (0, _reactRedux.connect)(select)(App);
+	exports.default = (0, _reactRedux.connect)(mapStateToProps)(_counter2.default);
 
 /***/ },
 
-/***/ 418:
-/***/ function(module, exports) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	exports.addTodo = addTodo;
-	exports.completeTodo = completeTodo;
-	exports.setVisibilityFilter = setVisibilityFilter;
-	var ADD_TODO = exports.ADD_TODO = 'ADD_TODO';
-	var COMPLETE_TODO = exports.COMPLETE_TODO = 'COMPLETE_TODO';
-	var SET_VISIBILITY_FILTER = exports.SET_VISIBILITY_FILTER = 'SET_VISIBILITY_FILTER';
-
-	var VisibilityFilters = exports.VisibilityFilters = {
-	  SHOW_ALL: 'SHOW_ALL',
-	  SHOW_COMPLETED: 'SHOW_COMPLETED',
-	  SHOW_ACTIVE: 'SHOW_ACTIVE'
-	};
-
-	function addTodo(text) {
-	  return { type: ADD_TODO, text: text };
-	}
-
-	function completeTodo(index) {
-	  return { type: COMPLETE_TODO, index: index };
-	}
-
-	function setVisibilityFilter(filter) {
-	  return { type: SET_VISIBILITY_FILTER, filter: filter };
-	}
-
-/***/ },
-
-/***/ 419:
+/***/ 272:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1971,46 +1833,36 @@ webpackJsonp([3],{
 	  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
 	}
 
-	var AddTodo = function (_Component) {
-	  _inherits(AddTodo, _Component);
+	var Counter = function (_Component) {
+	  _inherits(Counter, _Component);
 
-	  function AddTodo() {
-	    _classCallCheck(this, AddTodo);
+	  function Counter() {
+	    _classCallCheck(this, Counter);
 
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(AddTodo).apply(this, arguments));
+	    return _possibleConstructorReturn(this, Object.getPrototypeOf(Counter).apply(this, arguments));
 	  }
 
-	  _createClass(AddTodo, [{
+	  _createClass(Counter, [{
 	    key: "render",
 	    value: function render() {
-	      var _this2 = this;
-
-	      return _react2.default.createElement("div", null, _react2.default.createElement("input", { type: "text", ref: "input" }), _react2.default.createElement("button", { onClick: function onClick(e) {
-	          return _this2.handleClick(e);
-	        } }, "Add"));
-	    }
-	  }, {
-	    key: "handleClick",
-	    value: function handleClick(e) {
-	      var node = this.refs.input;
-	      var text = node.value.trim();
-	      this.props.onAddClick(text);
-	      node.value = '';
+	      return _react2.default.createElement("div", { className: "innerDiv" }, "Clicked: ", counter, " times", _react2.default.createElement("input", { type: "button", value: "递减", onClick: increment }), _react2.default.createElement("input", { type: "button", value: "递增", onClick: decrement }));
 	    }
 	  }]);
 
-	  return AddTodo;
+	  return Counter;
 	}(_react.Component);
 
-	exports.default = AddTodo;
+	exports.default = Counter;
 
-	AddTodo.propTypes = {
-	  onAddClick: _react.PropTypes.func.isRequired
+	Counter.propTypes = {
+	  increment: _react.PropTypes.func.isRequired,
+	  decrement: _react.PropTypes.func.isRequired,
+	  counter: _react.PropTypes.number.isRequired
 	};
 
 /***/ },
 
-/***/ 420:
+/***/ 273:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2019,323 +1871,54 @@ webpackJsonp([3],{
 	  value: true
 	});
 
-	var _extends = Object.assign || function (target) {
-	  for (var i = 1; i < arguments.length; i++) {
-	    var source = arguments[i];for (var key in source) {
-	      if (Object.prototype.hasOwnProperty.call(source, key)) {
-	        target[key] = source[key];
-	      }
-	    }
-	  }return target;
-	};
-
-	var _createClass = function () {
-	  function defineProperties(target, props) {
-	    for (var i = 0; i < props.length; i++) {
-	      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-	    }
-	  }return function (Constructor, protoProps, staticProps) {
-	    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-	  };
-	}();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _Todo = __webpack_require__(421);
-
-	var _Todo2 = _interopRequireDefault(_Todo);
-
-	function _interopRequireDefault(obj) {
-	  return obj && obj.__esModule ? obj : { default: obj };
-	}
-
-	function _classCallCheck(instance, Constructor) {
-	  if (!(instance instanceof Constructor)) {
-	    throw new TypeError("Cannot call a class as a function");
-	  }
-	}
-
-	function _possibleConstructorReturn(self, call) {
-	  if (!self) {
-	    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-	  }return call && (typeof call === "object" || typeof call === "function") ? call : self;
-	}
-
-	function _inherits(subClass, superClass) {
-	  if (typeof superClass !== "function" && superClass !== null) {
-	    throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
-	  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-	}
-
-	var TodoList = function (_Component) {
-	  _inherits(TodoList, _Component);
-
-	  function TodoList() {
-	    _classCallCheck(this, TodoList);
-
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(TodoList).apply(this, arguments));
-	  }
-
-	  _createClass(TodoList, [{
-	    key: 'render',
-	    value: function render() {
-	      var _this2 = this;
-
-	      return _react2.default.createElement('ul', null, this.props.todos.map(function (todo, index) {
-	        return _react2.default.createElement(_Todo2.default, _extends({}, todo, {
-	          key: index,
-	          onClick: function onClick() {
-	            return _this2.props.onTodoClick(index);
-	          } }));
-	      }));
-	    }
-	  }]);
-
-	  return TodoList;
-	}(_react.Component);
-
-	exports.default = TodoList;
-
-	TodoList.propTypes = {
-	  onTodoClick: _react.PropTypes.func.isRequired,
-	  todos: _react.PropTypes.arrayOf(_react.PropTypes.shape({
-	    text: _react.PropTypes.string.isRequired,
-	    completed: _react.PropTypes.bool.isRequired
-	  }).isRequired).isRequired
-	};
-
-/***/ },
-
-/***/ 421:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () {
-	  function defineProperties(target, props) {
-	    for (var i = 0; i < props.length; i++) {
-	      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-	    }
-	  }return function (Constructor, protoProps, staticProps) {
-	    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-	  };
-	}();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) {
-	  return obj && obj.__esModule ? obj : { default: obj };
-	}
-
-	function _classCallCheck(instance, Constructor) {
-	  if (!(instance instanceof Constructor)) {
-	    throw new TypeError("Cannot call a class as a function");
-	  }
-	}
-
-	function _possibleConstructorReturn(self, call) {
-	  if (!self) {
-	    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-	  }return call && (typeof call === "object" || typeof call === "function") ? call : self;
-	}
-
-	function _inherits(subClass, superClass) {
-	  if (typeof superClass !== "function" && superClass !== null) {
-	    throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
-	  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-	}
-
-	var Todo = function (_Component) {
-	  _inherits(Todo, _Component);
-
-	  function Todo() {
-	    _classCallCheck(this, Todo);
-
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(Todo).apply(this, arguments));
-	  }
-
-	  _createClass(Todo, [{
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement('li', {
-	        onClick: this.props.onClick,
-	        style: {
-	          textDecoration: this.props.completed ? 'line-through' : 'none',
-	          cursor: this.props.completed ? 'default' : 'pointer'
-	        } }, this.props.text);
-	    }
-	  }]);
-
-	  return Todo;
-	}(_react.Component);
-
-	exports.default = Todo;
-
-	Todo.propTypes = {
-	  onClick: _react.PropTypes.func.isRequired,
-	  text: _react.PropTypes.string.isRequired,
-	  completed: _react.PropTypes.bool.isRequired
-	};
-
-/***/ },
-
-/***/ 422:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () {
-	  function defineProperties(target, props) {
-	    for (var i = 0; i < props.length; i++) {
-	      var descriptor = props[i];descriptor.enumerable = descriptor.enumerable || false;descriptor.configurable = true;if ("value" in descriptor) descriptor.writable = true;Object.defineProperty(target, descriptor.key, descriptor);
-	    }
-	  }return function (Constructor, protoProps, staticProps) {
-	    if (protoProps) defineProperties(Constructor.prototype, protoProps);if (staticProps) defineProperties(Constructor, staticProps);return Constructor;
-	  };
-	}();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) {
-	  return obj && obj.__esModule ? obj : { default: obj };
-	}
-
-	function _classCallCheck(instance, Constructor) {
-	  if (!(instance instanceof Constructor)) {
-	    throw new TypeError("Cannot call a class as a function");
-	  }
-	}
-
-	function _possibleConstructorReturn(self, call) {
-	  if (!self) {
-	    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-	  }return call && (typeof call === "object" || typeof call === "function") ? call : self;
-	}
-
-	function _inherits(subClass, superClass) {
-	  if (typeof superClass !== "function" && superClass !== null) {
-	    throw new TypeError("Super expression must either be null or a function, not " + typeof superClass);
-	  }subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } });if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass;
-	}
-
-	var Footer = function (_Component) {
-	  _inherits(Footer, _Component);
-
-	  function Footer() {
-	    _classCallCheck(this, Footer);
-
-	    return _possibleConstructorReturn(this, Object.getPrototypeOf(Footer).apply(this, arguments));
-	  }
-
-	  _createClass(Footer, [{
-	    key: 'renderFilter',
-	    value: function renderFilter(filter, name) {
-	      var _this2 = this;
-
-	      if (filter === this.props.filter) {
-	        return name;
-	      }
-
-	      return _react2.default.createElement('a', { href: '#', onClick: function onClick(e) {
-	          e.preventDefault();
-	          _this2.props.onFilterChange(filter);
-	        } }, name);
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement('p', null, 'Show:', ' ', this.renderFilter('SHOW_ALL', 'All'), ', ', this.renderFilter('SHOW_COMPLETED', 'Completed'), ', ', this.renderFilter('SHOW_ACTIVE', 'Active'), '.');
-	    }
-	  }]);
-
-	  return Footer;
-	}(_react.Component);
-
-	exports.default = Footer;
-
-	Footer.propTypes = {
-	  onFilterChange: _react.PropTypes.func.isRequired,
-	  filter: _react.PropTypes.oneOf(['SHOW_ALL', 'SHOW_COMPLETED', 'SHOW_ACTIVE']).isRequired
-	};
-
-/***/ },
-
-/***/ 423:
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
+	var _action = __webpack_require__(274);
 
 	var _redux = __webpack_require__(245);
 
-	var _actions = __webpack_require__(418);
-
-	function _toConsumableArray(arr) {
-	  if (Array.isArray(arr)) {
-	    for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) {
-	      arr2[i] = arr[i];
-	    }return arr2;
-	  } else {
-	    return Array.from(arr);
-	  }
-	}
-
-	var SHOW_ALL = _actions.VisibilityFilters.SHOW_ALL;
-
-	function visibilityFilter() {
-	  var state = arguments.length <= 0 || arguments[0] === undefined ? SHOW_ALL : arguments[0];
+	function count() {
+	  var state = arguments.length <= 0 || arguments[0] === undefined ? 0 : arguments[0];
 	  var action = arguments[1];
 
 	  switch (action.type) {
-	    case _actions.SET_VISIBILITY_FILTER:
-	      return action.filter;
+	    case _action.INCREASE:
+	      return state++;
+
+	    case _action.REDUCE:
+	      return state--;
+
 	    default:
 	      return state;
 	  }
 	}
 
-	function todos() {
-	  var state = arguments.length <= 0 || arguments[0] === undefined ? [] : arguments[0];
-	  var action = arguments[1];
+	var rootReducer = (0, _redux.combineReducers)({ count: count });
 
-	  switch (action.type) {
-	    case _actions.ADD_TODO:
-	      return [].concat(_toConsumableArray(state), [{
-	        text: action.text,
-	        completed: false
-	      }]);
-	    case _actions.COMPLETE_TODO:
-	      return [].concat(_toConsumableArray(state.slice(0, action.index)), [Object.assign({}, state[action.index], {
-	        completed: true
-	      })], _toConsumableArray(state.slice(action.index + 1)));
-	    default:
-	      return state;
-	  }
-	}
+	exports.default = rootReducer;
 
-	var todoApp = (0, _redux.combineReducers)({
-	  visibilityFilter: visibilityFilter,
-	  todos: todos
+/***/ },
+
+/***/ 274:
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
 	});
+	exports.increment = increment;
+	exports.decrement = decrement;
+	var INCREASE = exports.INCREASE = 'INCREASE';
+	var REDUCE = exports.REDUCE = 'REDUCE';
 
-	exports.default = todoApp;
+	function increment(num) {
+	  return { type: INCREASE, num: num };
+	}
+
+	function decrement(num) {
+	  return { type: REDUCE, num: num };
+	}
+
+	//主要是判断页面有几个状态
 
 /***/ }
 
