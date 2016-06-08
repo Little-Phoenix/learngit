@@ -1,4 +1,6 @@
-
+body{
+  font-size: 12px;
+}
 .homelink,.hellolink,.formlink,.buttonlink,.timerlink{
   margin: 10px;
 }
@@ -110,5 +112,93 @@ a{
 
 .good-title a{
   color: #343434;
+}
 
+.good-period{
+  margin-bottom: 10px;
+}
+
+.progressbar{
+  display: block;
+  width: 100%;
+}
+
+.progress-bar-wrap{
+  position: relative;
+  margin-bottom: 8px;
+  height: 8px;
+  overflow: hidden;
+  background-position: 0 0;
+  display: block;
+}
+
+.progress-bar-wrap, .progress-bar-bar{
+  background-image: url('3.png');
+  background-repeat: no-repeat;
+}
+
+.progress-bar-bar{
+  position: absolute;
+  height: 100%;
+  background-position: 0 -8px;
+}
+
+.f-clear::before, .f-clear::after{
+  content: '.';
+  clear: both;
+  font-size: 0;
+  display: block;
+  height: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+.progressbar-txt li{
+  float: left;
+  width: 50%;
+  line-height: 18px;
+}
+
+.progressbar-txt p b{
+  color: #333;
+  font-weight: normal;
+}
+
+.progressbar-txt strong{
+  font-weight: normal;
+  color: #ff9900;
+}
+
+.progressbar-txt-r{
+  float: right;
+  border: 0;
+  text-align: right;
+}
+
+ul, li{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.goods-opr{
+  margin-top: 17px;
+  text-align: center;
+}
+.goods-opr .button{
+  padding: 0 20px;
+  height: 35px;
+  line-height: 35px;
+  font-size: 16px;
+  border-radius: 4px;
+  background-color: #dd344f;
+  border: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none!important;
+  outline: none;
+  display: inline-block;
+  font-weight: bold;
 }
