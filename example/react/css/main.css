@@ -23,3 +23,92 @@
 .innerDiv{
   margin: 10px
 }
+
+.countdown {
+  padding: 20px;
+  line-height: 24px;
+  color: #3b3b3b;
+  font-size: 15px;
+}
+p{
+  padding: 0;
+  margin: 0;
+}
+.title {
+  vertical-align: middle;
+  font-weight: bold;
+  color: #808080;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+.ico {
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  background: url('1.png') no-repeat;
+}
+.ico-countdown {
+  width: 26px;
+  height: 24px
+}
+
+.ico-countdown-gray {
+  background-position: -60px -100px;
+}
+
+.nums{
+  position: relative;
+  vertical-align: middle;
+  text-align: center;
+  margin-bottom: 16px;
+  color: #db3652;
+  font-size: 30px;
+}
+
+.nums b{
+  text-align: center;
+  line-height: 37px;
+  width: 28px;
+  display: inline-block;
+  background: #db3652;
+  color: #fff;
+  font-size: 25px;
+  margin-right: 2px;
+  border-radius: 4px;
+  font-weight: normal;
+}
+
+.goods-info{
+  color: #808080;
+  padding: 10px 20px;
+  background: #fff;
+  _zoom: 1;
+}
+
+.goodpic{
+  margin-bottom: 10px;
+}
+
+.goodpic img{
+  margin: 0 auto;
+  display: block;
+}
+
+p{
+  padding: 0;
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 0px;
+  line-height: 24px;
+}
+
+a{
+  text-decoration: none;
+}
+
+.good-title a{
+  color: #343434;
+
+}

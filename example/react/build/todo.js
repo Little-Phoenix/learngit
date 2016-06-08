@@ -1,4 +1,4 @@
-webpackJsonp([3],{
+webpackJsonp([5],{
 
 /***/ 0:
 /***/ function(module, exports, __webpack_require__) {
@@ -11,15 +11,15 @@ webpackJsonp([3],{
 
 	var _reactDom = __webpack_require__(37);
 
-	var _redux = __webpack_require__(245);
+	var _redux = __webpack_require__(246);
 
-	var _reactRedux = __webpack_require__(258);
+	var _reactRedux = __webpack_require__(259);
 
-	var _TodoApp = __webpack_require__(417);
+	var _TodoApp = __webpack_require__(419);
 
 	var _TodoApp2 = _interopRequireDefault(_TodoApp);
 
-	var _reducers = __webpack_require__(423);
+	var _reducers = __webpack_require__(425);
 
 	var _reducers2 = _interopRequireDefault(_reducers);
 
@@ -34,7 +34,7 @@ webpackJsonp([3],{
 
 /***/ },
 
-/***/ 245:
+/***/ 246:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -42,27 +42,27 @@ webpackJsonp([3],{
 	exports.__esModule = true;
 	exports.compose = exports.applyMiddleware = exports.bindActionCreators = exports.combineReducers = exports.createStore = undefined;
 
-	var _createStore = __webpack_require__(246);
+	var _createStore = __webpack_require__(247);
 
 	var _createStore2 = _interopRequireDefault(_createStore);
 
-	var _combineReducers = __webpack_require__(253);
+	var _combineReducers = __webpack_require__(254);
 
 	var _combineReducers2 = _interopRequireDefault(_combineReducers);
 
-	var _bindActionCreators = __webpack_require__(255);
+	var _bindActionCreators = __webpack_require__(256);
 
 	var _bindActionCreators2 = _interopRequireDefault(_bindActionCreators);
 
-	var _applyMiddleware = __webpack_require__(256);
+	var _applyMiddleware = __webpack_require__(257);
 
 	var _applyMiddleware2 = _interopRequireDefault(_applyMiddleware);
 
-	var _compose = __webpack_require__(257);
+	var _compose = __webpack_require__(258);
 
 	var _compose2 = _interopRequireDefault(_compose);
 
-	var _warning = __webpack_require__(254);
+	var _warning = __webpack_require__(255);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
@@ -86,7 +86,7 @@ webpackJsonp([3],{
 
 /***/ },
 
-/***/ 246:
+/***/ 247:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -95,11 +95,11 @@ webpackJsonp([3],{
 	exports.ActionTypes = undefined;
 	exports["default"] = createStore;
 
-	var _isPlainObject = __webpack_require__(247);
+	var _isPlainObject = __webpack_require__(248);
 
 	var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
 
-	var _symbolObservable = __webpack_require__(251);
+	var _symbolObservable = __webpack_require__(252);
 
 	var _symbolObservable2 = _interopRequireDefault(_symbolObservable);
 
@@ -354,12 +354,12 @@ webpackJsonp([3],{
 
 /***/ },
 
-/***/ 247:
+/***/ 248:
 /***/ function(module, exports, __webpack_require__) {
 
-	var getPrototype = __webpack_require__(248),
-	    isHostObject = __webpack_require__(249),
-	    isObjectLike = __webpack_require__(250);
+	var getPrototype = __webpack_require__(249),
+	    isHostObject = __webpack_require__(250),
+	    isObjectLike = __webpack_require__(251);
 
 	/** `Object#toString` result references. */
 	var objectTag = '[object Object]';
@@ -431,7 +431,7 @@ webpackJsonp([3],{
 
 /***/ },
 
-/***/ 248:
+/***/ 249:
 /***/ function(module, exports) {
 
 	/* Built-in method references for those with the same name as other `lodash` methods. */
@@ -453,7 +453,7 @@ webpackJsonp([3],{
 
 /***/ },
 
-/***/ 249:
+/***/ 250:
 /***/ function(module, exports) {
 
 	/**
@@ -480,7 +480,7 @@ webpackJsonp([3],{
 
 /***/ },
 
-/***/ 250:
+/***/ 251:
 /***/ function(module, exports) {
 
 	/**
@@ -516,19 +516,19 @@ webpackJsonp([3],{
 
 /***/ },
 
-/***/ 251:
+/***/ 252:
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/* global window */
 	'use strict';
 
-	module.exports = __webpack_require__(252)(global || window || this);
+	module.exports = __webpack_require__(253)(global || window || this);
 
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
 
-/***/ 252:
+/***/ 253:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -554,7 +554,7 @@ webpackJsonp([3],{
 
 /***/ },
 
-/***/ 253:
+/***/ 254:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -562,13 +562,13 @@ webpackJsonp([3],{
 	exports.__esModule = true;
 	exports["default"] = combineReducers;
 
-	var _createStore = __webpack_require__(246);
+	var _createStore = __webpack_require__(247);
 
-	var _isPlainObject = __webpack_require__(247);
+	var _isPlainObject = __webpack_require__(248);
 
 	var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
 
-	var _warning = __webpack_require__(254);
+	var _warning = __webpack_require__(255);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
@@ -687,7 +687,7 @@ webpackJsonp([3],{
 
 /***/ },
 
-/***/ 254:
+/***/ 255:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -718,7 +718,7 @@ webpackJsonp([3],{
 
 /***/ },
 
-/***/ 255:
+/***/ 256:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -775,7 +775,7 @@ webpackJsonp([3],{
 
 /***/ },
 
-/***/ 256:
+/***/ 257:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -786,7 +786,7 @@ webpackJsonp([3],{
 
 	exports["default"] = applyMiddleware;
 
-	var _compose = __webpack_require__(257);
+	var _compose = __webpack_require__(258);
 
 	var _compose2 = _interopRequireDefault(_compose);
 
@@ -839,7 +839,7 @@ webpackJsonp([3],{
 
 /***/ },
 
-/***/ 257:
+/***/ 258:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -885,7 +885,7 @@ webpackJsonp([3],{
 
 /***/ },
 
-/***/ 258:
+/***/ 259:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -893,11 +893,11 @@ webpackJsonp([3],{
 	exports.__esModule = true;
 	exports.connect = exports.Provider = undefined;
 
-	var _Provider = __webpack_require__(259);
+	var _Provider = __webpack_require__(260);
 
 	var _Provider2 = _interopRequireDefault(_Provider);
 
-	var _connect = __webpack_require__(262);
+	var _connect = __webpack_require__(263);
 
 	var _connect2 = _interopRequireDefault(_connect);
 
@@ -908,7 +908,7 @@ webpackJsonp([3],{
 
 /***/ },
 
-/***/ 259:
+/***/ 260:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -918,11 +918,11 @@ webpackJsonp([3],{
 
 	var _react = __webpack_require__(1);
 
-	var _storeShape = __webpack_require__(260);
+	var _storeShape = __webpack_require__(261);
 
 	var _storeShape2 = _interopRequireDefault(_storeShape);
 
-	var _warning = __webpack_require__(261);
+	var _warning = __webpack_require__(262);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
@@ -992,7 +992,7 @@ webpackJsonp([3],{
 
 /***/ },
 
-/***/ 260:
+/***/ 261:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1009,7 +1009,7 @@ webpackJsonp([3],{
 
 /***/ },
 
-/***/ 261:
+/***/ 262:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1039,7 +1039,7 @@ webpackJsonp([3],{
 
 /***/ },
 
-/***/ 262:
+/***/ 263:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1051,31 +1051,31 @@ webpackJsonp([3],{
 
 	var _react = __webpack_require__(1);
 
-	var _storeShape = __webpack_require__(260);
+	var _storeShape = __webpack_require__(261);
 
 	var _storeShape2 = _interopRequireDefault(_storeShape);
 
-	var _shallowEqual = __webpack_require__(263);
+	var _shallowEqual = __webpack_require__(264);
 
 	var _shallowEqual2 = _interopRequireDefault(_shallowEqual);
 
-	var _wrapActionCreators = __webpack_require__(264);
+	var _wrapActionCreators = __webpack_require__(265);
 
 	var _wrapActionCreators2 = _interopRequireDefault(_wrapActionCreators);
 
-	var _warning = __webpack_require__(261);
+	var _warning = __webpack_require__(262);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
-	var _isPlainObject = __webpack_require__(265);
+	var _isPlainObject = __webpack_require__(266);
 
 	var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
 
-	var _hoistNonReactStatics = __webpack_require__(269);
+	var _hoistNonReactStatics = __webpack_require__(270);
 
 	var _hoistNonReactStatics2 = _interopRequireDefault(_hoistNonReactStatics);
 
-	var _invariant = __webpack_require__(270);
+	var _invariant = __webpack_require__(271);
 
 	var _invariant2 = _interopRequireDefault(_invariant);
 
@@ -1438,7 +1438,7 @@ webpackJsonp([3],{
 
 /***/ },
 
-/***/ 263:
+/***/ 264:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -1470,7 +1470,7 @@ webpackJsonp([3],{
 
 /***/ },
 
-/***/ 264:
+/***/ 265:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1478,7 +1478,7 @@ webpackJsonp([3],{
 	exports.__esModule = true;
 	exports["default"] = wrapActionCreators;
 
-	var _redux = __webpack_require__(245);
+	var _redux = __webpack_require__(246);
 
 	function wrapActionCreators(actionCreators) {
 	  return function (dispatch) {
@@ -1488,12 +1488,12 @@ webpackJsonp([3],{
 
 /***/ },
 
-/***/ 265:
+/***/ 266:
 /***/ function(module, exports, __webpack_require__) {
 
-	var getPrototype = __webpack_require__(266),
-	    isHostObject = __webpack_require__(267),
-	    isObjectLike = __webpack_require__(268);
+	var getPrototype = __webpack_require__(267),
+	    isHostObject = __webpack_require__(268),
+	    isObjectLike = __webpack_require__(269);
 
 	/** `Object#toString` result references. */
 	var objectTag = '[object Object]';
@@ -1565,7 +1565,7 @@ webpackJsonp([3],{
 
 /***/ },
 
-/***/ 266:
+/***/ 267:
 /***/ function(module, exports) {
 
 	/* Built-in method references for those with the same name as other `lodash` methods. */
@@ -1587,7 +1587,7 @@ webpackJsonp([3],{
 
 /***/ },
 
-/***/ 267:
+/***/ 268:
 /***/ function(module, exports) {
 
 	/**
@@ -1614,7 +1614,7 @@ webpackJsonp([3],{
 
 /***/ },
 
-/***/ 268:
+/***/ 269:
 /***/ function(module, exports) {
 
 	/**
@@ -1650,7 +1650,7 @@ webpackJsonp([3],{
 
 /***/ },
 
-/***/ 269:
+/***/ 270:
 /***/ function(module, exports) {
 
 	/**
@@ -1699,7 +1699,7 @@ webpackJsonp([3],{
 
 /***/ },
 
-/***/ 270:
+/***/ 271:
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -1757,7 +1757,7 @@ webpackJsonp([3],{
 
 /***/ },
 
-/***/ 417:
+/***/ 419:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1780,19 +1780,19 @@ webpackJsonp([3],{
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactRedux = __webpack_require__(258);
+	var _reactRedux = __webpack_require__(259);
 
-	var _actions = __webpack_require__(418);
+	var _actions = __webpack_require__(420);
 
-	var _AddTodo = __webpack_require__(419);
+	var _AddTodo = __webpack_require__(421);
 
 	var _AddTodo2 = _interopRequireDefault(_AddTodo);
 
-	var _TodoList = __webpack_require__(420);
+	var _TodoList = __webpack_require__(422);
 
 	var _TodoList2 = _interopRequireDefault(_TodoList);
 
-	var _Footer = __webpack_require__(422);
+	var _Footer = __webpack_require__(424);
 
 	var _Footer2 = _interopRequireDefault(_Footer);
 
@@ -1891,7 +1891,7 @@ webpackJsonp([3],{
 
 /***/ },
 
-/***/ 418:
+/***/ 420:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1926,7 +1926,7 @@ webpackJsonp([3],{
 
 /***/ },
 
-/***/ 419:
+/***/ 421:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -2010,7 +2010,7 @@ webpackJsonp([3],{
 
 /***/ },
 
-/***/ 420:
+/***/ 422:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2043,7 +2043,7 @@ webpackJsonp([3],{
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _Todo = __webpack_require__(421);
+	var _Todo = __webpack_require__(423);
 
 	var _Todo2 = _interopRequireDefault(_Todo);
 
@@ -2108,7 +2108,7 @@ webpackJsonp([3],{
 
 /***/ },
 
-/***/ 421:
+/***/ 423:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2187,7 +2187,7 @@ webpackJsonp([3],{
 
 /***/ },
 
-/***/ 422:
+/***/ 424:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2274,7 +2274,7 @@ webpackJsonp([3],{
 
 /***/ },
 
-/***/ 423:
+/***/ 425:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -2283,9 +2283,9 @@ webpackJsonp([3],{
 	  value: true
 	});
 
-	var _redux = __webpack_require__(245);
+	var _redux = __webpack_require__(246);
 
-	var _actions = __webpack_require__(418);
+	var _actions = __webpack_require__(420);
 
 	function _toConsumableArray(arr) {
 	  if (Array.isArray(arr)) {

@@ -1,4 +1,4 @@
-webpackJsonp([1],{
+webpackJsonp([2],{
 
 /***/ 0:
 /***/ function(module, exports, __webpack_require__) {
@@ -11,15 +11,15 @@ webpackJsonp([1],{
 
 	var _reactDom = __webpack_require__(37);
 
-	var _redux = __webpack_require__(245);
+	var _redux = __webpack_require__(246);
 
-	var _reactRedux = __webpack_require__(258);
+	var _reactRedux = __webpack_require__(259);
 
-	var _connect = __webpack_require__(271);
+	var _connect = __webpack_require__(272);
 
 	var _connect2 = _interopRequireDefault(_connect);
 
-	var _reducers = __webpack_require__(273);
+	var _reducers = __webpack_require__(274);
 
 	var _reducers2 = _interopRequireDefault(_reducers);
 
@@ -34,7 +34,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 245:
+/***/ 246:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -42,27 +42,27 @@ webpackJsonp([1],{
 	exports.__esModule = true;
 	exports.compose = exports.applyMiddleware = exports.bindActionCreators = exports.combineReducers = exports.createStore = undefined;
 
-	var _createStore = __webpack_require__(246);
+	var _createStore = __webpack_require__(247);
 
 	var _createStore2 = _interopRequireDefault(_createStore);
 
-	var _combineReducers = __webpack_require__(253);
+	var _combineReducers = __webpack_require__(254);
 
 	var _combineReducers2 = _interopRequireDefault(_combineReducers);
 
-	var _bindActionCreators = __webpack_require__(255);
+	var _bindActionCreators = __webpack_require__(256);
 
 	var _bindActionCreators2 = _interopRequireDefault(_bindActionCreators);
 
-	var _applyMiddleware = __webpack_require__(256);
+	var _applyMiddleware = __webpack_require__(257);
 
 	var _applyMiddleware2 = _interopRequireDefault(_applyMiddleware);
 
-	var _compose = __webpack_require__(257);
+	var _compose = __webpack_require__(258);
 
 	var _compose2 = _interopRequireDefault(_compose);
 
-	var _warning = __webpack_require__(254);
+	var _warning = __webpack_require__(255);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
@@ -86,7 +86,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 246:
+/***/ 247:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -95,11 +95,11 @@ webpackJsonp([1],{
 	exports.ActionTypes = undefined;
 	exports["default"] = createStore;
 
-	var _isPlainObject = __webpack_require__(247);
+	var _isPlainObject = __webpack_require__(248);
 
 	var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
 
-	var _symbolObservable = __webpack_require__(251);
+	var _symbolObservable = __webpack_require__(252);
 
 	var _symbolObservable2 = _interopRequireDefault(_symbolObservable);
 
@@ -354,12 +354,12 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 247:
+/***/ 248:
 /***/ function(module, exports, __webpack_require__) {
 
-	var getPrototype = __webpack_require__(248),
-	    isHostObject = __webpack_require__(249),
-	    isObjectLike = __webpack_require__(250);
+	var getPrototype = __webpack_require__(249),
+	    isHostObject = __webpack_require__(250),
+	    isObjectLike = __webpack_require__(251);
 
 	/** `Object#toString` result references. */
 	var objectTag = '[object Object]';
@@ -431,7 +431,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 248:
+/***/ 249:
 /***/ function(module, exports) {
 
 	/* Built-in method references for those with the same name as other `lodash` methods. */
@@ -453,7 +453,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 249:
+/***/ 250:
 /***/ function(module, exports) {
 
 	/**
@@ -480,7 +480,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 250:
+/***/ 251:
 /***/ function(module, exports) {
 
 	/**
@@ -516,19 +516,19 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 251:
+/***/ 252:
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/* global window */
 	'use strict';
 
-	module.exports = __webpack_require__(252)(global || window || this);
+	module.exports = __webpack_require__(253)(global || window || this);
 
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
 
-/***/ 252:
+/***/ 253:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -554,7 +554,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 253:
+/***/ 254:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -562,13 +562,13 @@ webpackJsonp([1],{
 	exports.__esModule = true;
 	exports["default"] = combineReducers;
 
-	var _createStore = __webpack_require__(246);
+	var _createStore = __webpack_require__(247);
 
-	var _isPlainObject = __webpack_require__(247);
+	var _isPlainObject = __webpack_require__(248);
 
 	var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
 
-	var _warning = __webpack_require__(254);
+	var _warning = __webpack_require__(255);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
@@ -687,7 +687,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 254:
+/***/ 255:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -718,7 +718,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 255:
+/***/ 256:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -775,7 +775,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 256:
+/***/ 257:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -786,7 +786,7 @@ webpackJsonp([1],{
 
 	exports["default"] = applyMiddleware;
 
-	var _compose = __webpack_require__(257);
+	var _compose = __webpack_require__(258);
 
 	var _compose2 = _interopRequireDefault(_compose);
 
@@ -839,7 +839,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 257:
+/***/ 258:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -885,7 +885,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 258:
+/***/ 259:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -893,11 +893,11 @@ webpackJsonp([1],{
 	exports.__esModule = true;
 	exports.connect = exports.Provider = undefined;
 
-	var _Provider = __webpack_require__(259);
+	var _Provider = __webpack_require__(260);
 
 	var _Provider2 = _interopRequireDefault(_Provider);
 
-	var _connect = __webpack_require__(262);
+	var _connect = __webpack_require__(263);
 
 	var _connect2 = _interopRequireDefault(_connect);
 
@@ -908,7 +908,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 259:
+/***/ 260:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -918,11 +918,11 @@ webpackJsonp([1],{
 
 	var _react = __webpack_require__(1);
 
-	var _storeShape = __webpack_require__(260);
+	var _storeShape = __webpack_require__(261);
 
 	var _storeShape2 = _interopRequireDefault(_storeShape);
 
-	var _warning = __webpack_require__(261);
+	var _warning = __webpack_require__(262);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
@@ -992,7 +992,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 260:
+/***/ 261:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1009,7 +1009,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 261:
+/***/ 262:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1039,7 +1039,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 262:
+/***/ 263:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1051,31 +1051,31 @@ webpackJsonp([1],{
 
 	var _react = __webpack_require__(1);
 
-	var _storeShape = __webpack_require__(260);
+	var _storeShape = __webpack_require__(261);
 
 	var _storeShape2 = _interopRequireDefault(_storeShape);
 
-	var _shallowEqual = __webpack_require__(263);
+	var _shallowEqual = __webpack_require__(264);
 
 	var _shallowEqual2 = _interopRequireDefault(_shallowEqual);
 
-	var _wrapActionCreators = __webpack_require__(264);
+	var _wrapActionCreators = __webpack_require__(265);
 
 	var _wrapActionCreators2 = _interopRequireDefault(_wrapActionCreators);
 
-	var _warning = __webpack_require__(261);
+	var _warning = __webpack_require__(262);
 
 	var _warning2 = _interopRequireDefault(_warning);
 
-	var _isPlainObject = __webpack_require__(265);
+	var _isPlainObject = __webpack_require__(266);
 
 	var _isPlainObject2 = _interopRequireDefault(_isPlainObject);
 
-	var _hoistNonReactStatics = __webpack_require__(269);
+	var _hoistNonReactStatics = __webpack_require__(270);
 
 	var _hoistNonReactStatics2 = _interopRequireDefault(_hoistNonReactStatics);
 
-	var _invariant = __webpack_require__(270);
+	var _invariant = __webpack_require__(271);
 
 	var _invariant2 = _interopRequireDefault(_invariant);
 
@@ -1438,7 +1438,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 263:
+/***/ 264:
 /***/ function(module, exports) {
 
 	"use strict";
@@ -1470,7 +1470,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 264:
+/***/ 265:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1478,7 +1478,7 @@ webpackJsonp([1],{
 	exports.__esModule = true;
 	exports["default"] = wrapActionCreators;
 
-	var _redux = __webpack_require__(245);
+	var _redux = __webpack_require__(246);
 
 	function wrapActionCreators(actionCreators) {
 	  return function (dispatch) {
@@ -1488,12 +1488,12 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 265:
+/***/ 266:
 /***/ function(module, exports, __webpack_require__) {
 
-	var getPrototype = __webpack_require__(266),
-	    isHostObject = __webpack_require__(267),
-	    isObjectLike = __webpack_require__(268);
+	var getPrototype = __webpack_require__(267),
+	    isHostObject = __webpack_require__(268),
+	    isObjectLike = __webpack_require__(269);
 
 	/** `Object#toString` result references. */
 	var objectTag = '[object Object]';
@@ -1565,7 +1565,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 266:
+/***/ 267:
 /***/ function(module, exports) {
 
 	/* Built-in method references for those with the same name as other `lodash` methods. */
@@ -1587,7 +1587,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 267:
+/***/ 268:
 /***/ function(module, exports) {
 
 	/**
@@ -1614,7 +1614,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 268:
+/***/ 269:
 /***/ function(module, exports) {
 
 	/**
@@ -1650,7 +1650,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 269:
+/***/ 270:
 /***/ function(module, exports) {
 
 	/**
@@ -1699,7 +1699,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 270:
+/***/ 271:
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
@@ -1757,7 +1757,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 271:
+/***/ 272:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1766,11 +1766,11 @@ webpackJsonp([1],{
 	  value: true
 	});
 
-	var _redux = __webpack_require__(245);
+	var _redux = __webpack_require__(246);
 
-	var _reactRedux = __webpack_require__(258);
+	var _reactRedux = __webpack_require__(259);
 
-	var _counter = __webpack_require__(272);
+	var _counter = __webpack_require__(273);
 
 	var _counter2 = _interopRequireDefault(_counter);
 
@@ -1788,7 +1788,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 272:
+/***/ 273:
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -1845,7 +1845,12 @@ webpackJsonp([1],{
 	  _createClass(Counter, [{
 	    key: "render",
 	    value: function render() {
-	      return _react2.default.createElement("div", { className: "innerDiv" }, "Clicked: ", counter, " times", _react2.default.createElement("input", { type: "button", value: "递减", onClick: increment }), _react2.default.createElement("input", { type: "button", value: "递增", onClick: decrement }));
+	      var _props = this.props;
+	      var increment = _props.increment;
+	      var decrement = _props.decrement;
+	      var counter = _props.counter;
+
+	      return _react2.default.createElement("div", { className: "innerDiv" }, "Clicked: ", counter, " times", _react2.default.createElement("button", { onClick: increment }, "递减"), _react2.default.createElement("button", { onClick: decrement }, "递增"));
 	    }
 	  }]);
 
@@ -1862,7 +1867,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 273:
+/***/ 274:
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1871,11 +1876,11 @@ webpackJsonp([1],{
 	  value: true
 	});
 
-	var _action = __webpack_require__(274);
+	var _action = __webpack_require__(275);
 
-	var _redux = __webpack_require__(245);
+	var _redux = __webpack_require__(246);
 
-	function count() {
+	function counter() {
 	  var state = arguments.length <= 0 || arguments[0] === undefined ? 0 : arguments[0];
 	  var action = arguments[1];
 
@@ -1891,13 +1896,13 @@ webpackJsonp([1],{
 	  }
 	}
 
-	var rootReducer = (0, _redux.combineReducers)({ count: count });
+	var rootReducer = (0, _redux.combineReducers)({ counter: counter });
 
 	exports.default = rootReducer;
 
 /***/ },
 
-/***/ 274:
+/***/ 275:
 /***/ function(module, exports) {
 
 	'use strict';
@@ -1910,12 +1915,12 @@ webpackJsonp([1],{
 	var INCREASE = exports.INCREASE = 'INCREASE';
 	var REDUCE = exports.REDUCE = 'REDUCE';
 
-	function increment(num) {
-	  return { type: INCREASE, num: num };
+	function increment() {
+	  return { type: INCREASE };
 	}
 
-	function decrement(num) {
-	  return { type: REDUCE, num: num };
+	function decrement() {
+	  return { type: REDUCE };
 	}
 
 	//主要是判断页面有几个状态
