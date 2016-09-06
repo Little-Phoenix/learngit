@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>首页</title>
+    <style media="screen">
+      .slideH{
+        width: 200px;
+        visibility: visible;
+        height: 140px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+
+      .container-h{
+      	position: relative;
+        overflow: hidden;
+      }
+      .slideH div{
+        float: left;
+      	position: relative;
+        background-color: red;
+        width: 200px;
+      }
+
+      .slideV{
+        height: 30px;
+        visibility: visible;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+
+      .container-v{
+        position: absolute;
+        overflow: hidden;
+      }
+
+      .slideV div{
+        display: block;
+        height: 30px;
+        position: absolute;
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="slideH">
+      <title>横向滚动</title>
+      <div class="container-h">
+        <div class="swipe-wrap">
+          <div>
+            <span>tab1</span>
+          </div>
+          <div>
+            <span>tab2</span>
+          </div>
+          <div>
+            <span>tab3</span>
+          </div>
+          <div>
+            <span>tab4</span>
+          </div>
+          <div>
+            <span>tab5</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slideV">
+      <span>竖向滚动</span>
+      <div class="container-v">
+        <div class="swipe-wrap">
+          <div>
+            <span>tab1</span>
+          </div>
+          <div>
+            <span>tab2</span>
+          </div>
+          <div>
+            <span>tab3</span>
+          </div>
+          <div>
+            <span>tab4</span>
+          </div>
+          <div>
+            <span>tab5</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="slideV.js" charset="utf-8"></script>
+    <script src="swipe.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      var containerH = document.getElementsByClassName('container-h')[0];
+      var defaultOptions = {
+        auto: 3000
+      }
+      new Swipe(containerH, defaultOptions);
+
+      new sliderV(document.getElementsByClassName('container-v')[0], defaultOptions);
+    </script>
+  </body>
+</html>
