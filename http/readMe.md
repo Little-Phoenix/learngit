@@ -35,3 +35,11 @@
 | User-Agent | User-Agent的内容包含发出请求的用户信息 | User-Agent: Mozila/5.0(Linux; X11) |
 | Via | 通知中间网关或代理服务器地址，通信协议 | Via: 1.0 fred,1.1 nowhere.com (Apache/1.1) |
 | Warning | 关于消息实体的警告信息 | Warn: 199 Miscellaneous warning |
+
+
+# Responses 部分
+
+| Header | 解释 | 示例 |
+|--------|------|------|
+| Accept-Ranges | 表明服务器是否支持指定范围请求及哪种类型的分段请求 | Accept-Ranges: bytes |
+| Age | 从原始服务器到代理缓存形成的
